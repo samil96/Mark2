@@ -16,6 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+""" 
+Importaciones para manejos de archivos media y estaticos
+"""
+from django.conf import settings
+#from django.conf.urls.static import static
+""" 
+Importaciones para Login y Logout
+"""
+from django.contrib.auth.views import login, logout
+from django.contrib.auth.decorators import login_required
+
+
 from Apps.Producto.views import listProducto, updateOferta
 
 urlpatterns = [
@@ -23,4 +35,8 @@ urlpatterns = [
     path('', include('Apps.Principal.urls', namespace="Principal")),
     path('producto', listProducto, name="listado"),
     path('update/<int:idp>', updateOferta, name="update"),
-]
+    path('accounts/login/', login, name="login"),
+    path('accounts/logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name="logout"),
+
+]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -42,7 +42,7 @@
             <div class="container-fluid">
                 <div class="inner-header">
                     <div class="logo">
-                        <a href="./index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        <a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
                     </div>
                     <div class="header-right">
                         <img src="{% static 'img/icons/search.png' %}" alt="" class="search-trigger">
@@ -58,17 +58,17 @@
                     </div>
                     <nav class="main-menu mobile-menu">
                         <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./categories.html">Shop</a>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Shop</a>
                                 <ul class="sub-menu">
-                                    <li><a href="product-page.html">Product Page</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Card</a></li>
-                                    <li><a href="check-out.html">Check out</a></li>
+                                    <li><a href="#">Product Page</a></li>
+                                    <li><a href="#">Shopping Card</a></li>
+                                    <li><a href="#">Check out</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./product-page.html">About</a></li>
-                            <li><a href="./check-out.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -109,7 +109,7 @@
                     <div class="col-lg-4">
                         <div class="page-breadcrumb">
                             <h2>Dresses<span>.</span></h2>
-                            <a href="#">Home</a>
+                            <a href="{% url 'Principal:home' %}">Home</a>
                             <a href="#">Dresses</a>
                             <a class="active" href="#">Night Dresses</a>
                         </div>

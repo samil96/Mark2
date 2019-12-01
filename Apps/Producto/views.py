@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from Apps.Producto.models import producto
+
+from django.db import IntegrityError
+from django.db.models import Sum
 # Create your views here.
 def listProducto(request):
     prod = producto.objects.all()
-    prod2 = producto.objects.filter(oferta = True)
-    context = {'prod':prod, 'prod2':prod2}
+    context = {'prod':prod}
     template = 'Producto/listado.html'
     return render(request, template, context)
 
