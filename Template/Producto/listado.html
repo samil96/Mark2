@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Oferta</td>
+        </tr>
+        <!-- listado de producto-->
+        {% if prod %}
+        {% for producto in prod %}
+        <tr>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.precio }}</td>
+            <td>{{ producto.oferta }}</td>
+            <td><a class="btn btn-primary" href="{% url 'update' producto.id %}">Cambiar a True</a></td>
+            <td><a href="#">Cambiar a False</a></td>
+           
+        </tr>
+        {% endfor %}
+        {% endif %}
+        <!-- fin de listado-->
+
+
+    </table>
+</body>
+</html>
