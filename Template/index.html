@@ -55,13 +55,13 @@
                 </div>
                 {% if not request.user.is_authenticated %}
                 <div class="user-access">
-                    <a href="#">Register</a>
-                    <a href="{%  url 'login' %}" class="in">Sign in</a>
+                    <a href="">Register</a>
+                    <a href="" class="in">Sign in</a>
                 </div>
                 {% else %}
                 <div class="user-access">
                         <a href="#">{{request.user}}</a>
-                        <a href="{% url 'logout' %}"class="in" >Salir</a>
+                        <a href="#"class="in" >Salir</a>
                         
                     </div>
                 {% endif %}

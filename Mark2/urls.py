@@ -30,13 +30,15 @@ from django.contrib.auth.decorators import login_required
 
 from Apps.Producto.views import listProducto, updateOferta
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Apps.Principal.urls', namespace="Principal")),
     path('producto', listProducto, name="listado"),
     path('update/<int:idp>', updateOferta, name="update"),
-    path('accounts/login/', login, name="login"),
-    path('accounts/logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name="logout"),
+    #path('accounts/login/', login, name="login"),
+    #path('accounts/logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name="logout"),    
+    #path('registro', registration, name="registro"),
 
 ]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
